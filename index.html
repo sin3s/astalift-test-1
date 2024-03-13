@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Astalfit</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/main.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Playfair+Display:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            fontFamily: {
+              lato: ["Lato", "sans-serif"],
+              playfair: ["Playfair Display", "serif"],
+            },
+          },
+        };
+      </script>
+</head>
+<body>
+    <header class="sticky top-0 z-50">
+        <nav class="flex justify-between items-center px-10 lg:px-20 py-5 bg-[#D7063B]">
+            <a href="#">
+                <img src="assests/NewAstaliftlogo.svg" alt="Astalfit" class="h-10">
+            </a>
+            <div class="space-x-4 lg:space-x-8 hidden lg:flex">
+                <a href="#" class="text-white hover:text-black">Jelly Aquarysta</a>
+                <a href="#section-2" class="text-white hover:text-black">Benefits</a>
+                <a href="#section-4" class="text-white hover:text-black">How to Apply</a>
+                <a href="#section-5" class="text-white hover:text-black">Free Sample Kit</a>
+            </div>
+            <button
+                disabled 
+                class="bg-[#AD0434] font-lato font-semibold text-white text-center 
+                hover:bg-white hover:text-[#d7063b] transition-all 
+                py-2 px-12 uppercase font-lato text-lg border-2 
+                border-[#d7063b] rounded-3xl hidden lg:block"
+            >
+                Shop Now
+            </button>
+            <div id="nav-toggle" class="lg:hidden">
+                <button class="px-2 py-2 rounded text-white" onclick="toggleDropdown()">
+                    <div class="flex flex-col justify-between w-6 h-4">
+                        <div class="w-6 h-0.5 bg-white rounded-2xl"></div>
+                        <div class="w-6 h-0.5 bg-white rounded-2xl"></div>
+                        <div class="w-6 h-0.5 bg-white rounded-2xl"></div>
+                    </div>
+                </button>
+            </div>
+        </nav>
+        <div id="dropdown-menu" class="hidden bg-[#AD0434] w-full p-6">
+            <a href="#" class="block py-2 text-white hover:text-black">Jelly Aquarysta</a>
+            <a href="#section-2" class="block py-2 text-white hover:text-black">Benefits</a>
+            <a href="#section-4" class="block py-2 text-white hover:text-black">How to Apply</a>
+            <a href="#section-5" class="block py-2 text-white hover:text-black">Free Sample Kit</a>
+        </div>
+    </header>    
+
+    <section id="hero" class="relative min-h-screen flex flex-col md:flex-row items-center">
+        <video
+            autoplay
+            loop
+            muted
+            plays-inline
+            class="bg-black absolute w-full h-full lg:h-auto object-cover bottom-0 z-49"
+            preload="auto"
+        >
+            <source src="assests/banner-vid.mp4" type="video/mp4" />
+        </video>
+        <div class="relative flex flex-col md:flex-row items-center justify-center gap-20 px-32">
+            <div class="w-full md:w-2/5">
+                <img
+                    id="hero-red-jelly"
+                    class="sticky pr-10"
+                    loading="lazy"
+                    src="assests/red-elly.svg"
+                >
+            </div>
+            <div class="relative w-full md:w-3/5 md:-ml-20 text-white">
+                <h2 class="font-playfair text-3xl md:text-5xl font-bold -mt-10 mb-5" style="line-height: 1.2;">
+                    Enrich your skin, bring out the beauty within
+                </h2>
+                <p class="font-lato text-lg md:text-xl mb-10 md:mr-20">
+                    Replenish, Revive, and Rejuvenate your skin barrier with the super-antioxidant skin conditioning serum —  the Red Jelly Aquarysta.
+                </p>
+                <a href="#" class="btn-liquid">
+                    <span class="inner">SHOP NOW</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="section-2" class="relative min-h-screen flex lg:flex-col flex-row items-center justify-between lg:px-20 pt-10">
+        <img
+            src="assests/sec-2-bg.png"
+            class="bg-black bg-cover absolute md:w-full h-full inset-0 object-cover"
+        >
+        <div class="flex flex-wrap justify-around w-full p-4">
+            <div class="flex md:mb-0 w-full justify-between">
+                <div
+                    id="ellipse-bg"
+                    class="bg-[url('assests/ellipse.svg')] bg-no-repeat bg-cover bg-center h-[142px] md:h-[300px] w-[142px] md:w-[300px] relative flex items-center justify-center"
+                >
+                    <div class="text-center">
+                        <p class="font-lato text-[#d7063b] text-xs md:text-lg w-[110px] md:w-[160px] mb-1">
+                            Boost in skin moisture content
+                        </p>
+                        <h1 class="font-playfair font-semibold text-xl md:text-5xl text-[#d7063b]">
+                            100%
+                        </h1>
+                    </div>
+                </div>
+                <div
+                    id="ellipse-bg"
+                    class="bg-[url('assests/ellipse.svg')] bg-no-repeat bg-cover bg-center h-[142px] md:h-[300px] w-[142px] md:w-[300px] relative flex items-center justify-center"
+                >
+                    <div class="text-center">
+                        <p class="font-lato text-[#d7063b] text-xs md:text-lg w-[80px] md:w-[160px] mb-1">
+                            Increase in skin radiance
+                        </p>
+                        <h1 class="font-playfair font-semibold text-xl md:text-5xl text-[#d7063b]">
+                            95%
+                        </h1>
+                    </div>
+                </div>
+            </div>
+            <div class="flex md:mb-0 justify-center flex-col items-center lg:hidden">
+                <img
+                    loading="lazy"
+                    class="lg:hidden md:hidden w-3/5 rotate-[8deg]"
+                    src="/assests/red-elly.svg"
+                    alt=""
+                />
+                <div class="text-center relative mt-4 lg:mt-48">
+                    <p class="font-playfair text-white text-lg md:text-2xl mb-2">
+                        After 4 weeks of continuous use
+                    </p>
+                    <h1 class="font-lato text-xs md:text-xs text-white">
+                        * Results may vary among individuals. Tested on 21 women aged between 30 to 50.
+                    </h1>
+                </div>
+            </div>
+            <div class="flex md:mb-0 w-full justify-between">
+                <div
+                    id="ellipse-bg"
+                    class="bg-[url('assests/ellipse.svg')] bg-no-repeat bg-cover bg-center h-[142px] md:h-[300px] w-[142px] md:w-[300px] relative flex items-center justify-center"
+                >
+                    <div class="text-center">
+                        <p class="font-lato text-[#d7063b] text-xs md:text-lg w-[110px] md:w-[160px] mb-1">
+                            Growth in skin firmness
+                        </p>
+                        <h1 class="font-playfair font-semibold text-xl md:text-5xl text-[#d7063b]">
+                            95%
+                        </h1>
+                    </div>
+                </div>
+                <div
+                    id="ellipse-bg"
+                    class="bg-[url('assests/ellipse.svg')] bg-no-repeat bg-cover bg-center h-[142px] md:h-[300px] w-[142px] md:w-[300px] relative flex items-center justify-center"
+                >
+                    <div class="text-center">
+                        <p class="font-lato text-[#d7063b] text-xs md:text-lg w-[80px] md:w-[160px] mb-1">
+                            Improvement in skin complexion
+                        </p>
+                        <h1 class="font-playfair font-semibold text-xl md:text-5xl text-[#d7063b]">
+                            85%
+                        </h1>
+                    </div>
+                </div>
+            </div>
+            <div class="flex md:mb-0 justify-center -mt-96 flex-col items-center hidden lg:block">
+                <img
+                    loading="lazy"
+                    class="lg:hidden md:hidden w-52 rotate-[8deg]"
+                    src="/assests/red-elly.svg"
+                    alt=""
+                />
+                <div class="text-center relative mt-4 lg:mt-48">
+                    <p class="font-playfair text-white text-xs md:text-2xl mb-2">
+                        After 4 weeks of continuous use
+                    </p>
+                    <h1 class="font-lato text-xl md:text-xs text-white">
+                        * Results may vary among individuals. Tested on 21 women aged between 30 to 50.
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="relative min-h-screen flex flex-col md:flex-row items-center justify-between px-6 lg:px-32">
+        <img
+            src="assests/section-2-liner.svg"
+            class="bg-[#D7063B] bg-cover absolute md:w-full h-full inset-0 object-cover"
+        >
+        <div class="relative flex flex-col md:flex-row justify-center lg:-mt-20 py-20">
+            <div class="sticky w-full md:w-2/6 text-center lg:text-left">
+                <div id="section-2-title" class="sticky top-100px">
+                    <h2 class="font-playfair text-white text-2xl md:text-5xl mb-10" style="line-height: 1.2;">
+                        At the Heart of the Formula
+                    </h2>
+                </div>
+            </div>
+            <div class="relative w-full md:w-4/6 lg:ml-32 flex flex-col">
+                <div id="card" class="sticky top-100px">
+                    <div id="card-1" class="card flex bg-white rounded-3xl py-10 lg:py-6 px-6 lg:px-0 h-full lg:h-96">
+                        <div class="flex items-center justify-center w-full lg:w-2/5 lg:ml-10 mb-5 lg:mb-0">
+                            <img
+                            loading="lazy"
+                            src="assests/Nano-Astaxanthin.gif"
+                            alt="" 
+                            />
+                        </div>
+                        <div class="font-lato flex flex-col justify-center lg:mx-10 w-full lg:w-3/5">
+                            <h2 class="font-lato text-[#d7063b] font-bold text-2xl mb-2">
+                              Nano-Astaxanthin
+                            </h2>
+                            <p class="text-md">
+                              The reddish tone of the Jelly Aquarysta comes from
+                              Astaxanthin—an organic red pigment produced by microalgae. It is
+                              one of nature’s most powerful antioxidants and is very effective
+                              in boosting skin firmness.
+                            </p>
+                        </div>
+                    </div>
+                </div>  
+                <div id="card" class="sticky top-100px lg:-translate-x-8 mt-10">
+                    <div id="card-2" class="card flex bg-white rounded-3xl py-10 lg:py-6 px-6 lg:px-0 h-full lg:h-96">
+                        <div class="flex items-center justify-center w-full lg:w-2/5 lg:ml-10 mb-5 lg:mb-0">
+                            <img
+                            loading="lazy"
+                            src="assests/Human-Type-Nano-Ceramides.gif"
+                            alt="" 
+                            />
+                        </div>
+                        <div class="font-lato flex flex-col justify-center lg:mx-10 w-full lg:w-3/5">
+                            <h2 class="font-lato text-[#d7063b] font-bold text-2xl mb-2">
+                                Human-Type Nano-Ceramides
+                            </h2>
+                            <p class="text-md">
+                                The human body naturally produces ceramides in the skin to keep
+                                it moisturized, but aging and cold, dry weather can cause a
+                                depletion and underproduction of ceramides. Jelly Aquarysta
+                                replenishes those ceramides, helping your skin regain its
+                                intrinsic beauty.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div id="card" class="sticky top-100px lg:-translate-x-16 mt-16">
+                    <div id="card-3" class="card flex bg-white rounded-3xl py-10 lg:py-6 px-6 lg:px-0 h-full lg:h-96">
+                        <div class="flex items-center justify-center w-full lg:w-2/5 lg:ml-10 mb-5 lg:mb-0">
+                            <img
+                            loading="lazy"
+                            src="assests/Nanotechnology.gif"
+                            alt="" 
+                            />
+                        </div>
+                        <div class="font-lato flex flex-col justify-center lg:mx-10 w-full lg:w-3/5">
+                            <h2 class="font-lato text-[#d7063b] font-bold text-2xl mb-2">
+                                Nanotechnology
+                            </h2>
+                            <p class="text-md">
+                                The results of the Jelly Aquarysta show so quickly because the
+                                ingredients – Nano-Astaxanthin, Nano-Lycopene and Triple
+                                Human-Type Nano-Ceramides have been nanolized by nanotechnology.
+                                These beneficial ingredients together with Tri-functional
+                                collagen penetrate deep into your skin on a cellular level and
+                                immediately work its magic on your stratum corneum.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> 
+
+    <section id="section-4" class="relative min-h-screen flex flex-col md:flex-col items-center justify-between pt-52 pb-20 px-10 lg:px-20"
+        style="background: linear-gradient(#D7063B, white 200px)">
+        <div class="flex-row text-center lg:mx-40">
+            <h2 class="text-[#d7063b] font-playfair text-4xl md:text-5xl mb-5">
+                How to Apply Astalift Jelly Aquarysta
+            </h2>
+            <p class="font-lato text-sm lg:text-md">
+                We recommend washing your face with cleanser and then patting
+                yourself dry with a towel before you begin using the Jelly Aquarysta
+                to maximise its ability to boost your skin’s defense against ageing,
+                UV damage, and free radicals.
+            </p> 
+        </div>
+        <div class="relative flex flex-col md:flex-row justify-center items-center mt-10">
+            <div class="flex flex-col md:flex-col items-center w-full lg:w-1/3 mb-10">
+                <div class="flex flex-col justify-center align-middle items-center w-full lg:w-3/5">
+                    <div class="bg-[#d7063b] rounded-full shadow-[0px_0px_30px_0px_#D7063B]">
+                        <img loading="lazy" src="assests/How-to-Apply_Step-1.gif" alt="" />
+                    </div>
+                </div>
+                <div class="flex-row text-center mt-10 lg:mx-10">
+                    <h2 class="text-[#d7063b] font-playfair text-3xl md:text-4xl mb-5">Step 1</h2>
+                    <p class="font-lato text-md mx-2">
+                        Using the spatula provided with the product, scoop a pearl-sized
+                        amount of Jelly Aquarysta and place it on your palm. Spread the
+                        product evenly on both hands.
+                    </p> 
+                </div>
+            </div>
+            <div class="hidden lg:flex flex-col items-center justify-center">
+                <div class="absolute top-[25%] w-1/12 h-px bg-[#d7063b]"></div>
+            </div>
+            <div class="flex flex-col md:flex-col items-center w-full lg:w-1/3 mb-10">
+                <div class="flex flex-col justify-center align-middle items-center w-full lg:w-3/5">
+                    <div class="bg-[#d7063b] rounded-full shadow-[0px_0px_30px_0px_#D7063B]">
+                        <img loading="lazy" src="assests/How-to-Apply_Step-2.gif" alt="" />
+                    </div>
+                </div>
+                <div class="flex-row text-center mt-10 lg:mx-10">
+                    <h2 class="text-[#d7063b] font-playfair text-3xl md:text-4xl mb-5">Step 2</h2>
+                    <p class="font-lato text-md mx-2">
+                        Press lightly on your cheeks and chin for 10 seconds with your
+                        Jelly-coated palms. Then, do the same on your forehead and
+                        eyelids. Repeat this step once more on your cheeks and chin.
+                    </p> 
+                </div>
+            </div>
+            <div class="hidden lg:flex flex-col items-center justify-center">
+                <div class="absolute top-[25%] w-1/12 h-px bg-[#d7063b]"></div>
+            </div>
+            <div class="flex flex-col md:flex-col items-center w-full lg:w-1/3 mb-10">
+                <div class="flex flex-col justify-center align-middle items-center w-full lg:w-3/5">
+                    <div class="bg-[#d7063b] rounded-full shadow-[0px_0px_30px_0px_#D7063B]">
+                        <img loading="lazy" src="assests/How-to-Apply_Step-3.gif" alt="" />
+                    </div>
+                </div>
+                <div class="flex-row text-center mt-10 lg:mx-10">
+                    <h2 class="text-[#d7063b] font-playfair text-3xl md:text-4xl mb-5">Step 3</h2>
+                    <p class="font-lato text-md mx-2">
+                        Proceed to the next part of your skincare routine. After using
+                        Jelly Aquarysta, your skin will be able to absorb the
+                        ingredients of the next product much better.
+                    </p> 
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="section-5" class="bg-gradient-to-b from-[#990330] to-[#d7063b] relative min-h-screen flex flex-col md:flex-col items-center justify-between px-8 lg:px-12 py-20">
+        <div class="flex-row text-center lg:mx-60 mb-10">
+            <h2 class="text-white font-playfair text-3xl md:text-5xl mb-5">
+                Simple Steps, Great Rewards
+            </h2>
+            <p class="text-white font-lato text-md">
+                Unlock exciting rewards at our store with just a few quick steps! <br>
+                Don’t wait—redeem your rewards worth <strong>$64</strong> now!
+            </p>
+        </div>
+        <div class="from-main-container">
+            <form action="" class="flex flex-row gap-5">
+                <div id="step-1" class="steps step-active relative h-full lg:h-[33rem] flex flex-col md:flex-row gap-5 text-center bg-white rounded-lg">
+                    <h2 class="text-[#d7063b] text-4xl lg:text-5xl font-playfair absolute left-4 lg:left-1 z-40">01</h2>
+                    <img class="w-full hidden md:block" src="./assests/freegift01.svg" alt="">
+                    <div class="flex flex-col gap-3 py-5 px-4 relative text-start">
+                        <h2 class="text-[#d7063b] text-2xl font-semibold font-playfair mt-5 lg:mt-0">Signup Form</h2>
+                        <p class="text-md mb-2">
+                            Fill in your details below and get started on the next step: 
+                            proving your Astalift Jelly Aquarysta knowledge!
+                        </p>
+                        <div class="flex flex-col lg:flex-row gap-2">
+                            <input
+                                type="text"
+                                minlength="2"
+                                name="first-name"
+                                placeholder="First Name*"
+                                class="border rounded-lg w-full lg:w-1/2 border-[#CDCDCD] px-5 py-1"
+                            />
+                            <input
+                                type="text"
+                                minlength="2"
+                                name="last-name"
+                                placeholder="Last Name*"
+                                class="border rounded-lg w-full lg:w-1/2 border-[#CDCDCD] px-5 py-1"
+                            />
+                        </div>                                             
+                        <div class="flex  flex-col lg:flex-row gap-2">
+                            <input
+                                type="email"
+                                id="10"
+                                name="email"
+                                placeholder="Email Address*"
+                                class="border rounded-lg w-full lg:w-1/2 border-[#CDCDCD] px-5 py-1"
+                            />
+                            <input
+                                type="text"
+                                minlength="10"
+                                id="mobile"
+                                name="mobile"
+                                placeholder="Mobile Number*"
+                                class="border rounded-lg w-full lg:w-1/2 border-[#CDCDCD] px-5 py-1"
+                            />
+                        </div>
+                        <div class="flex items-start mt-2 mb-1">
+                            <label for="personal-data" class="flex items-start cursor-pointer">
+                                <div class="relative mt-1">
+                                    <input id="personal-data" type="checkbox" class="hidden" />
+                                    <div class="w-3 h-3 lg:w-4 lg:h-4 flex flex-shrink-0 justify-center items-center mr-2 border border-gray-400 rounded">
+                                        <svg class="fill-current hidden w-3 h-3 text-green-500 pointer-events-none" viewBox="0 0 20 20" id="icon-check">
+                                            <path d="M0 11l2-2 5 5L18 3l2 2L7 18z"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="text-[#535353] font-lato text-xs lg:text-sm">
+                                    I consent for my personal data to be collected and
+                                    processed for the use of this Astalift Marketing Campaign.
+                                    All Personal data provided to Astalift will be processed in
+                                    accordance with the Singapore Personal Data Protection Act
+                                    2012. Astalift will never share your personal data with any
+                                    third parties except those engaged by us in order to provide
+                                    our products and services to you under this Campaign.
+                                </div>
+                            </label>
+                        </div>                                                        
+                        <div class="flex items-start mb-2">
+                            <label for="mailing-list" class="flex items-start cursor-pointer">
+                                <div class="relative mt-1">
+                                    <input
+                                        name="mailing-list"
+                                        id="mailing-list"
+                                        type="checkbox"
+                                        class="hidden"
+                                    />
+                                    <div class="w-3 h-3 lg:w-4 lg:h-4 flex flex-shrink-0 justify-center items-center mr-2 border border-gray-400 rounded">
+                                        <svg class="fill-current hidden w-3 h-3 text-green-500 pointer-events-none" viewBox="0 0 20 20" id="icon-check">
+                                            <path d="M0 11l2-2 5 5L18 3l2 2L7 18z"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="text-[#535353] font-lato text-xs lg:text-sm">
+                                    I consent to join Astalift mailing list and receive 
+                                    marketing & promotional news from Astalift.
+                                </div>
+                            </label>
+                        </div>
+                        <button id="step-1-btn"
+                            class="text-[#d7063b] text-center font-semibold tracking-widest 
+                            hover:bg-[#AD0434] hover:text-white transition-all py-2 
+                            uppercase font-lato text-md border-2 border-[#d7063b] rounded-3xl my-2"
+                        >
+                            Get Your Free Samples
+                        </button>
+                        <p class="text-gray-600 text-xs font-plato text-center">
+                            By clicking “Get Your Free Sample”, 
+                            you consent to our <a href="#" class="text-blue-500 underline">Terms of Service</a>, 
+                            <a href="#" class="text-blue-500 underline">Privacy Policy</a>, 
+                            <a href="#" class="text-blue-500 underline">E-Sign Consent Policy</a>
+                        </p>
+                    </div>
+                </div>
+              
+                <div id="step-2" class="steps step-inactive bg-white space-x-4 md:flex justify-center items-center relative w-64 lg:w-40 h-[38rem] lg:h-[33rem] overflow-hidden flex-col md:flex-row gap-5 text-center rounded-lg">
+                    <h2 class="text-[#d7063b] text-5xl font-playfair absolute top-0 left-4 lg:left-1 z-40">02</h2>
+                    <video
+                        autoplay
+                        loop
+                        muted
+                        plays-inline
+                        class="w-1/2 object-cover z-49 pl-10 hidden md:block"
+                        preload="auto"
+                    >
+                        <source src="assests/Jelly_Video_Final.mp4" type="video/mp4" />
+                    </video>
+                    <div class="flex lg:flex-col flex-row items-center gap-y-24 lg:gap-x-24 justify-between relative mt-16 lg:mt-0 mb-5 lg:mb-0 px-8 lg:px-0">
+                        <div class="q-nav-1 relative z-10 rounded-full bg-[#d7063b] w-6 h-6 -ml-8 lg:-ml-0">
+                            <span class="text-white">1</span>
+                        </div>
+                        <div class="w-52 h-[2px] bg-[#FFDFDE] lg:w-[2px] lg:h-full absolute z-0 -ml-8 lg:-ml-0"></div>
+                        <div class="q-nav-2 relative z-10 rounded-full bg-[#FFDFDE] w-6 h-6">
+                            <span class="text-white">2</span>
+                        </div>
+                        <div class="q-nav-3 relative z-10 rounded-full bg-[#FFDFDE] w-6 h-6">
+                            <span class="text-white">3</span>
+                        </div>
+                    </div>                    
+                    <div class="flex flex-col gap-2 w-full h-72 relative">
+                        <div class="flex flex-col gap-2 w-full h-72 relative">
+                            <div class="question-1 text-start absolute right-7">
+                                <p id="q-1" class="text-left mb-2">Which ingredient in the Jelly Aquarysta is responsible for causing its natural red tone?</p>
+                                <input type="radio" id="Astaxanthin" name="q-1" value="Astaxanthin" class="question-one form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-[#d7063b] checked:border-[#d7063b] focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" />
+                                <label for="Astaxanthin">Astaxanthin</label><br />
+                                <input type="radio" id="Asenyaku" name="q-1" value="Asenyaku extract" class="question-one form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-[#d7063b] checked:border-[#d7063b] focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" />
+                                <label for="Asenyaku">Asenyaku extract</label><br />
+                                <input type="radio" id="Lycopene" name="q-1" value="Lycopene" class="question-one form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-[#d7063b] checked:border-[#d7063b] focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" />
+                                <label for="Lycopene">Lycopene</label><br />
+                                <input type="radio" id="Collagen" name="q-1" value="Collagen" class="question-one form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-[#d7063b] checked:border-[#d7063b] focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" />
+                                <label for="Collagen">Collagen</label><br />
+                            </div>
+                            <div class="question-2 text-start hidden pr-8 lg:pr-0">
+                                <p id="q-2" class="text-left">How does nanotechnology make the Jelly Aquarysta able to permeate the skin so quickly?</p>
+                                <div class="flex items-start mt-2 mb-1">
+                                    <label for="Astaxanthin" class="flex items-start cursor-pointer">
+                                        <div class="relative">
+                                            <input id="Astaxanthin" type="radio" name="q-2" value="It charges the ingredients to be electrically compatible with the human skin" class="form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-[#d7063b] checked:border-[#d7063b] focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" />
+                                        </div>
+                                        <div class="font-lato text-md">
+                                            It charges the ingredients to be electrically compatible with the human skin
+                                        </div>
+                                    </label>
+                                </div>                                
+                                <div class="flex items-start mt-2 mb-1">
+                                    <label for="Asenyaku" class="flex items-start cursor-pointer">
+                                        <div class="relative">
+                                            <input id="Asenyaku" type="radio" name="q-2" value="It nanolizes the ingredients to be smaller than the human cell" class="form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-[#d7063b] checked:border-[#d7063b] focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" />
+                                        </div>
+                                        <div class="font-lato text-md">
+                                            It nanolizes the ingredients to be smaller than the human cell
+                                        </div>
+                                    </label>
+                                </div>                                
+                                <div class="flex items-start mt-2 mb-1 pr-8 lg:pr-0">
+                                    <label for="Lycopene" class="flex items-start cursor-pointer">
+                                        <div class="relative">
+                                            <input id="Lycopene" type="radio" name="q-2" value="It turns the ingredients into highly absorbable liquid" class="form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-[#d7063b] checked:border-[#d7063b] focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" />
+                                        </div>
+                                        <div class="font-lato text-md">
+                                            It turns the ingredients into highly absorbable liquid
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="flex items-start mt-2 mb-1">
+                                    <label for="Collagen" class="flex items-start cursor-pointer">
+                                        <div class="relative">
+                                            <input id="Collagen" type="radio" name="q-2" value="It makes the ingredients more flexible to better slip through your pores" class="form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-[#d7063b] checked:border-[#d7063b] focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" />
+                                        </div>
+                                        <div class="font-lato text-md">
+                                            It makes the ingredients more flexible to better slip through your pores
+                                        </div>
+                                    </label>
+                                </div>                                
+                            </div>
+                            <div class="question-3 text-start absolute hidden">
+                                <p id="q-3" class="text-left mb-2">What is the ingredient in the Jelly Aquarysta that is also naturally produced by the human body?</p>
+                                <input type="radio" id="q-3-Lycopene" name="q-3" value="Lycopene" class="form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-[#d7063b] checked:border-[#d7063b] focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" />
+                                <label for="q-3-Lycopene">Lycopene</label><br />
+                                <input type="radio" id="q-3-Astaxanthin" name="q-3" value="Astaxanthin" class="form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-[#d7063b] checked:border-[#d7063b] focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" />
+                                <label for="q-3-Astaxanthin">Astaxanthin</label><br />
+                                <input type="radio" id="q-3-Ceramides" name="q-3" value="Lycopene" class="form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-[#d7063b] checked:border-[#d7063b] focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" />
+                                <label for="q-3-Ceramides">Ceramides</label><br />
+                                <input type="radio" id="q-3-Collagen" name="q-3" value="Collagen" class="form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-[#d7063b] checked:border-[#d7063b] focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" />
+                                <label for="q-3-Collagen">Collagen</label><br />
+                                <br>
+                                <br>
+                                <a id="step-2-btn" 
+                                    class="px-7 text-[#d7063b] text-center font-semibold tracking-widest hover:bg-[#d7063b] hover:text-white transition-all py-1 uppercase font-lato text-[16px] border-2 border-[#d7063b] rounded-2xl" 
+                                >
+                                    DONE
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <div id="step-3" class="steps step-inactive relative w-64 lg:w-40 h-[30rem] lg:h-[33rem] overflow-hidden md:flex flex-col md:flex-row gap-5 text-center bg-white rounded-lg">
+                    <h2 class="text-[#d7063b] text-5xl font-playfair absolute top-0 left-1 z-40">03</h2>
+                    <div class="right-0 w-full h-full hidden lg:object">
+                        <img class="h-full" src="assests/tankyou.png" alt="">
+                    </div>
+                    <div class="flex flex-col gap-3 py-5 px-4 relative text-center lg:hidden">
+                        <h2 class="text-[#d7063b] text-2xl font-semibold font-playfair mt-24 lg:mt-0">Thank You!</h2>
+                        <p class="text-md mb-4">
+                            Kindly screenshot this section and present it to
+                            our beauty consultants for redemption and 
+                            verification purposes. 
+                        </p>
+                        <p class="text-md">
+                            Please ensure that sample kit is
+                            collected before
+                        </p>
+                        <p class="text-[#d7063b] text-xl font-semibold ">
+                            April 14, 2024
+                        </p>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <section id="bottle-container" class="bg-gradient-to-b from-[#D7063B] to-[white] hidden lg:block">
+        <div class="relative h-[100vh] bg-gradient-to-b from-[#D7063B] to-white/54 transition-none pt-40">
+            <img
+        
+            id="spatula"
+            class="absolute hidden md:block z-10 left-[38%] -translate-x-[50%] bottom-[50%] transition-none"
+            src="assests/spatula.svg"
+            alt=""
+            />
+            <img
+        
+            id="bottel-cover"
+            class="absolute z-10 left-[50%] translate-x-[-50%] -rotate-[20deg] bottom-[20%] transition-none"
+            src="assests/bottel_cover.svg"
+            alt=""
+            />
+            <img
+        
+            id="bottel"
+            class="absolute left-[50%] -translate-x-[50%] bottom-0 transition-none"
+            src="assests/bottel.svg"
+            alt=""
+            />
+        </div>
+    </section>
+
+    <section class="relative min-h-screen flex flex-col lg:flex-row justify-between px-10 lg:px-40 py-20">
+        <div class="w-full lg:w-2/5 lg:mt-20">
+            <div id="section-2-title">
+                <h2 class="font-playfair text-[#d7063b] text-3xl lg:text-6xl md:text-4xl mb-5" style="line-height: 1.2;">
+                    Trusted By <br> Our Customers
+                </h2>
+                <p class="w-full lg:w-1/2">
+                    Our Jelly Aquarysta products boost our customers’ 
+                    satisfaction as well as their skin’s health.
+                </p>
+            </div>
+        </div>
+        <div class="w-full lg:w-3/5 flex flex-wrap mt-8 lg:mt-20 container-review">
+            <div class="w-full md:w-1/2 lg:pr-2">
+                <div class="bg-[#FFDFDE] row-span-1 rounded-xl h-fit py-9 px-7 space-y-3 mb-4">
+                    <div class="font-lato flex flex-col justify-center">
+                        <h2 class="font-lato text-[#d7063b] font-bold text-3xl mb-2">
+                            Rachel L
+                        </h2>
+                        <img loading="lazy" src="assests/5stars.svg" class="w-2/3 my-5"/>
+                        <p class="font-bold text-md mb-5">
+                            Easy adsorption for optimum hydration.
+                        </p>
+                        <p>
+                            The jelly consistency is pack with nutrients that is easily
+                            absorbed into the skin. My skin feels supple and hydrated after
+                            using it every night. It also prepare the skin for better
+                            adsorption of subsequent serum and products.
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-[#FFDFDE] row-span-1 rounded-xl h-fit py-9 px-7 space-y-3 mb-4">
+                    <div class="font-lato flex flex-col justify-center">
+                        <h2 class="font-lato text-[#d7063b] font-bold text-3xl mb-2">
+                            Sarah Wan
+                        </h2>
+                        <img loading="lazy" src="assests/5stars.svg" class="w-2/3 my-5"/>
+                        <p class="font-bold text-md mb-5">
+                            To a healthier, radiant skin!
+                        </p>
+                        <p>
+                            Having a sensitive skin makes me very skeptical in 
+                            trying facial products (lest to say new product). 
+                            But this Jelly Aquarysta is amazing as it's light 
+                            and acceptable to my skin. Love the fragrance too!
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-[#FFDFDE] row-span-1 rounded-xl h-fit py-9 px-7 space-y-3 mb-4">
+                    <div class="font-lato flex flex-col justify-center">
+                        <h2 class="font-lato text-[#d7063b] font-bold text-3xl mb-2">
+                            KM Jwong
+                        </h2>
+                        <img loading="lazy" src="assests/5stars.svg" class="w-2/3 my-5"/>
+                        <p class="font-bold text-md mb-5">
+                            Awesome Improvement of my Skin.
+                        </p>
+                        <p>
+                            My first experience with Jelly was more than 3 years ago. 
+                            What got me started was my quest to find a product that 
+                            was highly hydrating yet suitable for oily skin. 
+                            Within 2 weeks of regular use, i became a fan as my 
+                            skin visibly got smoother, firmer & more moisturised.
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-[#FFDFDE] row-span-1 rounded-xl h-fit py-9 px-7 space-y-3 mb-4">
+                    <div class="font-lato flex flex-col justify-center">
+                        <h2 class="font-lato text-[#d7063b] font-bold text-3xl mb-2">
+                            Kim Min Jung
+                        </h2>
+                        <img loading="lazy" src="assests/5stars.svg" class="w-2/3 my-5"/>
+                        <p class="font-bold text-md mb-5">
+                            Comfortable skin.
+                        </p>
+                        <p>
+                            My skin type was oily. But these days I've 
+                            been feeling the dryness more and more seriously.
+                            Jelly Aquarysta always makes my skin comfortable 
+                            before and now.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full md:w-1/2 lg:pl-2">
+                <div class="bg-[#FFDFDE] rounded-xl h-fit py-9 px-7 space-y-3 mb-4">
+                    <div class="font-lato flex flex-col justify-center">
+                        <h2 class="font-lato text-[#d7063b] font-bold text-3xl mb-2">
+                            K Wong
+                        </h2>
+                        <img loading="lazy" src="assests/5stars.svg" class="w-2/3 my-5"/>
+                        <p class="font-bold text-md mb-5">
+                            Great Product!
+                        </p>
+                        <p>
+                            I've been using this skincare routine for a while now, 
+                            and I have to say, I'm quite impressed. My skin has 
+                            noticeably improved in texture and tone. 
+                            The products feel luxurious and have a pleasant scent, 
+                            making my daily skincare routine feel like a spa-like experience. 
+                            I've also noticed that my skin feels more hydrated and supple, 
+                            which has boosted my confidence. Overall, I would highly 
+                            recommend the JELLY AQUARYSTA; they truly work wonders!
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-[#FFDFDE] rounded-xl h-fit py-9 px-7 space-y-3 mb-4">
+                    <div class="font-lato flex flex-col justify-center">
+                        <h2 class="font-lato text-[#d7063b] font-bold text-3xl mb-2">
+                            Jasmine Tan
+                        </h2>
+                        <img loading="lazy" src="assests/5stars.svg" class="w-2/3 my-5"/>
+                        <p class="font-bold text-md mb-5">
+                            Best Jelly skincare.
+                        </p>
+                        <p>
+                            Well absorbed into my skin after applying within 
+                            seconds. It makes my skin moisturised all day!
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-[#FFDFDE] rounded-xl h-fit py-9 px-7 space-y-3 mb-4">
+                    <div class="font-lato flex flex-col justify-center">
+                        <h2 class="font-lato text-[#d7063b] font-bold text-3xl mb-2">
+                            Yuichi Kamoshida
+                        </h2>
+                        <img loading="lazy" src="assests/5stars.svg" class="w-2/3 my-5"/>
+                        <p class="font-bold text-md mb-5">
+                            The Best Skin Care for Mens.
+                        </p>
+                        <p>
+                            I have been using Aquarysta jelly for more than 
+                            5 years and it keeps my skin good condition.
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-[#FFDFDE] rounded-xl h-fit py-9 px-7 space-y-3 mb-4">
+                    <div class="font-lato flex flex-col justify-center">
+                        <h2 class="font-lato text-[#d7063b] font-bold text-3xl mb-2">
+                            Low Chun Hong Jesmond
+                        </h2>
+                        <img loading="lazy" src="assests/5stars.svg" class="w-2/3 my-5"/>
+                        <p class="font-bold text-md mb-5">
+                            Suitable for Oily Skin
+                        </p>
+                        <p>
+                            As my skin type is oily, I am surprise that after 
+                            using Astalift Jelly Aquarysta, I don't encounter 
+                            any acne break-out problem. My skin texture actually 
+                            improved. This jelly is wonderful! Highly recommended.
+                        </p>
+                    </div>
+                </div>
+            </div>        
+        </div>
+    </section>
+
+    <section class="bg-gradient-to-b from-[#AD0434] to-[#d7063b] relative min-h-screen flex flex-col items-center justify-between py-20 px-8 lg:px-40">
+        <div class="flex flex-col md:flex-row justify-center gap-5 mb-6">
+            <img
+              loading="lazy"
+              class="w-full md:w-[58%]"
+              src="./assests/statistics-1.svg"
+              alt=""
+            />
+            <img
+              loading="lazy"
+              class="md:w-[41%]"
+              src="./assests/statistics-2.svg"
+              alt=""
+            />
+          </div>
+          <div class="flex flex-col align-middle">
+            <img
+              loading="lazy"
+              class="hidden md:block w-full h-full"
+              src="./assests/statistics-3.svg"
+              alt=""
+            />
+            <img
+              loading="lazy"
+              class="block md:hidden w-full h-full"
+              src="./assests/statistics-3-mobile.svg"
+              alt=""
+            />
+            <p class="text-white text-xs lg:text-sm mt-8 text-center">
+                * External testing organization: Pony Testing International Group / 30 women (Sensitive skin) / March ~ April 2023
+            </p>
+          </div>
+    </section>
+
+    <section class="relative min-h-screen flex flex-col md:flex-col items-center justify-between px-8 lg:px-20 py-24">
+        <div class="flex-row text-center">
+            <h2 class="text-[#d7063b] font-playfair text-4xl md:text-6xl">
+                Meet Our Jelly Families
+            </h2>
+        </div>
+        <div class="relative flex flex-col md:flex-row justify-center items-center gap-8 mt-10 w-full">
+            <div class="flex flex-col md:flex-col items-center w-full lg:w-1/3">
+                <div class="flex flex-col justify-center align-middle items-center mx-5 lg:mx-16">
+                    <img loading="lazy" src="assests/product-1.svg" alt="" />
+                </div>
+                <div class="flex-row text-center mt-5 mx-5">
+                    <h2 class="text-[#d7063b] font-lato text-2xl md:text-2xl mb-4">White Jelly Aquarysta</h2>
+                    <p class="font-lato text-lg mx-2 mb-4">
+                        $21.00 – $241.00
+                    </p>
+                    <button
+                        disabled
+                        href=""
+                        class="bg-[#AD0434] text-white text-center tracking-widest hover:bg-transparent
+                        hover:text-[#d7063b] transition-all py-2 px-12 uppercase font-lato text-lg border-2 
+                        border-[#d7063b] rounded-3xl">
+                        SHOP Now
+                    </button>
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-col items-center w-full lg:w-1/3">
+                <div class="flex flex-col justify-center align-middle items-center mx-5 lg:mx-16">
+                    <img loading="lazy" src="assests/product-3.svg" alt="" />
+                </div>
+                <div class="flex-row text-center mt-5 mx-5">
+                    <h2 class="text-[#d7063b] font-lato text-3xl md:text-2xl mb-4">Jelly Aquarysta</h2>
+                    <p class="font-lato text-lg mx-2 mb-4">
+                        $19.00 – $222.00
+                    </p>
+                    <button
+                        disabled
+                        href=""
+                        class="bg-[#AD0434] text-white text-center tracking-widest hover:bg-transparent
+                        hover:text-[#d7063b] transition-all py-2 px-10 uppercase font-lato text-lg border-2 
+                        border-[#d7063b] rounded-3xl">
+                        SHOP Now
+                    </button>
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-col items-cente w-full lg:w-1/3">
+                <div class="flex flex-col justify-center align-middle items-center mx-5 lg:mx-16">
+                    <img loading="lazy" src="assests/product-2.png" alt="" />
+                </div>
+                <div class="flex-row text-center mt-5 mx-5">
+                    <h2 class="text-[#d7063b] font-lato text-3xl md:text-2xl mb-4">Men Jelly Aquarysta</h2>
+                    <p class="font-lato text-lg mx-2 mb-4">
+                        $19.00 – $222.00
+                    </p> 
+                    <button
+                        disabled
+                        href=""
+                        class="bg-[#AD0434] text-white text-center tracking-widest hover:bg-transparent
+                        hover:text-[#d7063b] transition-all py-2 px-10 uppercase font-lato text-lg border-2 
+                        border-[#d7063b] rounded-3xl">
+                        SHOP Now
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-[#FFDFDE] relative min-h-screen flex flex-col md:flex-col items-center justify-between px-8 lg:px-32 py-20">
+        <div class="flex-row text-center pb-10 lg:pb-20">
+            <h2 class="text-[#d7063b] font-playfair text-4xl md:text-6xl">
+                Frequently Asked Questions
+            </h2>
+        </div>
+        <div class="flex-row text-center w-full">
+            <button id="faq-1" class="faq flex flex-col justify-between items-center border-b-[1px] border-[#d7063b] w-full mb-6">
+                <div class="flex justify-between w-full mb-5">
+                    <h2 class="font-bold font-lato text-md">1. How does the Jelly Aquarysta benefit my skin?</h2>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>  
+                </div>
+                <p id="answer-1" class="answer hidden mb-6 pl-4 text-left">
+                    The Jelly Aquarysta strengthens your skin’s natural 
+                    defence against environmental factors such as air 
+                    pollution and dryness while rebalancing water-oil levels 
+                    and enhancing your skin’s capacity to absorb and retain 
+                    moisture. With regular use, you will experience 
+                    improvements in skin elasticity, smoothness, 
+                    moisture levels, and minimization of wrinkles.
+                </p>
+            </button>
+            <button id="faq-2" class="faq flex flex-col justify-between items-center border-b-[1px] border-[#d7063b] w-full mb-6">
+                <div class="flex justify-between w-full mb-5">
+                    <h2 class="font-bold font-lato text-md">2. What is in the Jelly Aquarysta that makes it so effective?</h2>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </div>
+                <p id="answer-2" class="answer hidden mb-6 pl-4 text-left">
+                    Nano-astaxanthin, Nano-lycopene, and Tri-functional 
+                    collagen—the Jelly Aquarysta combines these three 
+                    to boost protection against anti-oxidation and free 
+                    radicals while also delaying your skin’s aging. Besides 
+                    that, the Jelly Aquarysta contains Asenyaku extract and 
+                    Triple Human-types Nano-ceramides which support optimal 
+                    absorption of ingredients into your skin and improve sit’s 
+                    moisture levels.
+                </p>
+            </button>
+            <button id="faq-3" class="faq flex flex-col justify-between items-center border-b-[1px] border-[#d7063b] w-full mb-6">
+                <div class="flex justify-between w-full mb-5">
+                    <h2 class="font-bold font-lato text-md">3. Is the reddish tone of the Jelly Aquarysta the result of artificial coloring?</h2>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </div>
+                <p id="answer-3" class="answer hidden mb-6 pl-4 text-left">
+                    No, the reddish tone is a natural effect of a key 
+                    active ingredient in the Jelly Aquarysta—Astaxanthin. 
+                    It is a marine botanical extract of micro-algae, and 
+                    naturally red Astaxanthin has been proven to provide 
+                    remarkable antioxidation and anti-aging properties 
+                    for the human skin.
+                </p>
+            </button>
+            <button id="faq-4" class="faq flex flex-col justify-between items-center border-b-[1px] border-[#d7063b] w-full mb-6">
+                <div class="flex justify-between w-full mb-5">
+                    <h2 class="font-bold font-lato text-md">4. Are the beneficial effects of the White Jelly Aquarysta different from Jelly Aquarysta?</h2>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </div>
+                <p id="answer-4" class="answer hidden mb-6 pl-4 text-left">
+                    Both products are highly effective in boosting your 
+                    skin’s moisture levels and defence mechanisms. 
+                    However, the White Jelly Aquarysta can also promote 
+                    your skin’s clarity and provide a brightening effect 
+                    with its potent formulation of Nano AMA+, Arbutin, 
+                    Horse Chestnut extract, and Bilberry Leaf extract.
+                </p>
+            </button>
+            <button id="faq-5" class="faq flex flex-col justify-between items-center w-full mb-6">
+                <div class="flex justify-between w-full mb-5">
+                    <h2 class="font-bold font-lato text-md">5. How should I apply White Jelly Aquarysta?</h2>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </div>
+                <p id="answer-5" class="answer hidden mb-6 pl-4 text-left">
+                    First, you must make sure your skin is not wet; pat 
+                    yourself dry with a towel. Next, use the spatula that 
+                    comes with the product to take the appropriate amount 
+                    of White Jelly Aquarysta. Apply one spatula of product 
+                    on your face and neck areas before rubbing the product 
+                    into your skin with your hands. We recommend you apply 
+                    the White Jelly Aquarysta in the morning and at night.
+                </p>
+            </button>
+        </div>
+    </section>
+
+    <footer class="flex flex-col md:grid md:grid-cols-4 gap-10 md:gap-24 w-100 h-full px-5 lg:px-32 mx-auto py-10">
+        <div>
+          <ul class="flex flex-col justify-satrt items-center md:items-start gap-3">
+            <li><a href="" class="uppercase font-lato font-semibold text-base">About Us</a></li>
+            <li><a href="" class="font-lato text-base text-[#727272]">Our Story</a></li>
+            <li><a href="" class="font-lato text-base text-[#727272]">Sustainability</a></li>
+          </ul>
+        </div>
+        <div>
+          <ul class="flex flex-col justify-satrt items-center md:items-start gap-3">
+            <li><a href="" class="uppercase font-lato font-semibold text-base">QUICK LINKS</a></li>
+            <li><a href="" class="font-lato text-base text-[#727272]">Shipping & Returns</a></li>
+            <li><a href="" class="font-lato text-base text-[#727272]">Privacy Policy</a></li>
+            <li><a href="" class="font-lato text-base text-[#727272]">Cookie Policy</a></li>
+            <li><a href="" class="font-lato text-base text-[#727272]">Terms of Service</a></li>
+            <li><a href="" class="font-lato text-base text-[#727272]">E-Sign Consent Policy</a></li>
+          </ul>
+        </div>
+        <div>
+          <ul class="flex flex-col justify-satrt items-center md:items-start gap-3">
+            <li><a href="" class="uppercase font-lato font-semibold text-base">CONTACT US</a></li>
+            <li><a href="" class="font-lato text-base text-[#727272]">Locate Us</a></li>
+            <li><a href="" class="font-lato text-base text-[#727272]">Contact Us</a></li>
+          </ul>
+        </div>
+        <div>
+            <ul class="flex flex-col justify-satrt items-center md:items-start gap-3">
+                <li><a href="" class="uppercase font-lato font-semibold text-base">FOLLOW US</a></li>
+                <div class="w-2/3 flex flex-row justify-evenly items-center">
+                    <li class="-ml-5">
+                        <a href="" class="font-lato text-base text-[#727272]">
+                            <svg class="w-6 h-6 text-black" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                                <path fill-rule="evenodd" d="M13.1 6H15V3h-1.9A4.1 4.1 0 0 0 9 7.1V9H7v3h2v10h3V12h2l.6-3H12V6.6a.6.6 0 0 1 .6-.6h.5Z" clip-rule="evenodd"/>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="font-lato text-base text-[#727272]">
+                            <svg class="w-6 h-6 text-black" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                                <path fill-rule="evenodd" d="M21.7 8c0-.7-.4-1.3-.8-2-.5-.5-1.2-.8-2-.8C16.2 5 12 5 12 5s-4.2 0-7 .2c-.7 0-1.4.3-2 .9-.3.6-.6 1.2-.7 2l-.2 3.1v1.5c0 1.1 0 2.2.2 3.3 0 .7.4 1.3.8 2 .6.5 1.4.8 2.2.8l6.7.2s4.2 0 7-.2c.7 0 1.4-.3 2-.9.3-.5.6-1.2.7-2l.2-3.1v-1.6c0-1 0-2.1-.2-3.2ZM10 14.6V9l5.4 2.8-5.4 2.8Z" clip-rule="evenodd"/>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="font-lato text-base text-gray-500">
+                            <svg width="20" height="20" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="30" height="30" fill="url(#pattern0)" />
+                                <defs>
+                                    <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                        <use xlink:href="#image0" transform="scale(0.00518135)" />
+                                    </pattern>
+                                    <image id="image0" width="193" height="193" xlink:href="data:image/png;base64,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" />
+                                </defs>
+                            </svg>
+                        </a>
+                    </li>
+                </div>
+            </ul>
+        </div>      
+    </footer>
+
+    <div id="modal" class="fixed z-50 inset-0 overflow-y-auto hidden" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+        <div class="flex items-center justify-center min-h-screen pt-4 px-4 pb-60 text-center">
+            <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" aria-hidden="true"></div>
+            <span class="hidden" aria-hidden="true">​</span>
+            <div class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all w-3/5 lg:w-4/5">
+                <div class="bg-white px-4 pt-5 pb-4">
+                    <h3 class="text-lg leading-6 font-medium text-gray-900" id="modal-title">
+                        Welcome
+                    </h3>
+                    <div class="mt-2">
+                        <p class="text-sm text-gray-500">
+                            This is a demonstration. After closing this notice, you will proceed to the next step.
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+                    <button type="button" id="close-btn" class="mt-3 w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-red-600 text-base font-medium text-white hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm">
+                        Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>    
+
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"
+        integrity="sha512-EZI2cBcGPnmR89wTgVnN3602Yyi7muWo8y1B3a8WmIv1J9tYG+udH4LvmYjLiGp37yHB7FfaPBo8ly178m9g4Q=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    ></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"
+        integrity="sha512-OzC82YiH3UmMMs6Ydd9f2i7mS+UFL5f977iIoJ6oy07AJT+ePds9QOEtqXztSH29Nzua59fYS36knmMcv79GOg=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    ></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    ></script>
+    <script src="js/main.js"></script>
+
+</body>
+</html>
